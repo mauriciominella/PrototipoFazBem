@@ -31,7 +31,7 @@ namespace FazBem
             else
                 MainPage = new NavigationPage(new FazBem.Views.CameraView());
 
-			MainPage = new NavigationPage(new FazBem.Views.ProductCommentsView());
+			//MainPage = new NavigationPage(new FazBem.Views.ProductCommentsView());
         }
 
         protected override void OnStart()
