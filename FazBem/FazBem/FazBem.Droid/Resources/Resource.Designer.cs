@@ -26,6 +26,8 @@ namespace FazBem.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::FazBem.Droid.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::FazBem.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -37,6 +39,43 @@ namespace FazBem.Droid
 			}
 			
 			private Attribute()
+			{
+			}
+		}
+		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040007
+			public const int ListViewHighlighted = 2130968583;
+			
+			// aapt resource value: 0x7f040006
+			public const int ListViewSelected = 2130968582;
+			
+			// aapt resource value: 0x7f040005
+			public const int StatusBarColor = 2130968581;
+			
+			// aapt resource value: 0x7f040000
+			public const int my_blue = 2130968576;
+			
+			// aapt resource value: 0x7f040003
+			public const int my_gray = 2130968579;
+			
+			// aapt resource value: 0x7f040001
+			public const int my_green = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int my_purple = 2130968578;
+			
+			// aapt resource value: 0x7f040004
+			public const int my_white = 2130968580;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
 			{
 			}
 		}
@@ -69,11 +108,33 @@ namespace FazBem.Droid
 			}
 		}
 		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7f030001
+			public const int ApplicationName = 2130903041;
+			
+			// aapt resource value: 0x7f030000
+			public const int Hello = 2130903040;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
+			{
+			}
+		}
+		
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int Mono_Android_Theme_Splash = 2130903040;
+			// aapt resource value: 0x7f050000
+			public const int AppStyle_Light = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int Mono_Android_Theme_Splash = 2131034113;
 			
 			static Style()
 			{

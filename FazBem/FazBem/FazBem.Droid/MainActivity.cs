@@ -17,8 +17,19 @@ namespace FazBem.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+			SetStatusBarColor ();
+
             LoadApplication(new App());
         }
+
+		void SetStatusBarColor ()
+		{
+			if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
+				Window.AddFlags (WindowManagerFlags.DrawsSystemBarBackgrounds);
+				Window.SetStatusBarColor (Resources.GetColor (Resource.Color.StatusBarColor));
+			}
+		}
     }
 }
 
