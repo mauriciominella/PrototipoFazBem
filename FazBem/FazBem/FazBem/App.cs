@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FazBem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,9 @@ namespace FazBem
         {
             DependencyService.Register<ViewModels.Services.IMessageService, Views.Services.MessageService>();
             DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
-
+		
             // The root page of your application
-           // MainPage = new NavigationPage(new FazBem.Views.ActivityListView());
+           // MainPage = new NavigationPage(new FazBem.Views.ProductDetailView());
         }
 
         protected override void OnStart()

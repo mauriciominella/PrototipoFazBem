@@ -11,10 +11,27 @@ namespace FazBem.ViewModels
 {
     public class ProductDetailViewModel : ViewModelBase
     {
-        public ProductDetailViewModel(Product productToBeRated)
-        {
-            this.ProductToBeRated = productToBeRated;
-        }
+		bool isLoading;
+		public bool IsLoading {
+			get {
+				return isLoading;
+			}
+			set {
+				isLoading = value;
+				Notify ("IsLoading");
+			}
+		}
+
+		public ProductDetailViewModel(){
+
+			ProductToBeRated = new Product()
+			{
+				Name = "Bolacha Maria"
+			};
+
+
+			this.Ratings = new ObservableCollection<UserRating> ();
+		}
 
         public ObservableCollection<UserRating> Ratings { get; set; }
 
