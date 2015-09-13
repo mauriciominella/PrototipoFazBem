@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FazBem.Views.FindYourProfile">
+	<ContentPage.Content>
+	<StackLayout Padding="30" HorizontalOptions="Center">
+		<Label Text="Bem vindo ao FazBemApp!" FontSize="25"></Label>
+		<Label Text="Escolha o seu perfil!" FontSize="15"></Label>
+		<StackLayout Orientation="Horizontal" VerticalOptions="Center">
+			<Image Source="LactoseNeutral.png"></Image>
+			<Image Source="LactoseNeutral.png"></Image>
+		</StackLayout>
+		<StackLayout Orientation="Horizontal">
+			<Image Source="LactoseNeutral.png"></Image>
+			<Image Source="LactoseNeutral.png"></Image>
+		</StackLayout>
+		<Button Text="Continuar"></Button>
+	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
