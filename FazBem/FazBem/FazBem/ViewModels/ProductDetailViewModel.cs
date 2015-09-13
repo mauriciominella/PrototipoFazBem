@@ -99,10 +99,10 @@ namespace FazBem.ViewModels
 			this.ProductDescription = ProductToBeRated.Name;
 
 
-			user.Profiles.Add (EnumProfile.Gluten);
-			user.Profiles.Add (EnumProfile.Lactose);
+			user.Profiles  = EnumProfile.Gluten | EnumProfile.Lactose
+;
 
-            foreach (var item in user.Profiles)
+            foreach (EnumProfile item in GetFlags(user.Profiles))
             {
                 this.ProductRatings.Add(new ProductRating()
                 {
@@ -112,7 +112,13 @@ namespace FazBem.ViewModels
 					UnlikeCount = 11,
                 });
             }
+		}
 		
+        static IEnumerable<Enum> GetFlags(Enum input)
+        {
+            foreach (Enum value in Enum.GetValues(input.GetType()))
+                if (input.HasFlag(value))
+                    yield return value;
 		}
     }
 }

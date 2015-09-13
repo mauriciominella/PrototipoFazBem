@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Collections;
+using System.ComponentModel;
 
 namespace FazBem.ViewModels
 {
@@ -18,13 +19,14 @@ namespace FazBem.ViewModels
 
 		public ProductCommentsViewModel()
 		{
+			
 			ProductDisplayed = new Product()
 			{
 				Name = "Bolacha Maria"
 			};
 
-			UserRatings = new List<UserRating> ();
-		
+			UserRatings = new ObservableCollection<UserRating>();
+
 			UserRatings.Add(new UserRating(){
 				Id="1",
 				Like = true,
@@ -33,7 +35,7 @@ namespace FazBem.ViewModels
 				User=new User(){
 					Id="1",
 					Name="Zé Carioca",
-					Profiles={EnumProfile.Lactose,EnumProfile.Gluten }
+					Profiles = EnumProfile.Lactose | EnumProfile.Gluten 
 				}
 			});
 				
@@ -45,12 +47,23 @@ namespace FazBem.ViewModels
 				User = new User () {
 					Id = "21",
 					Name = "Zé Colméia",
-					Profiles = { EnumProfile.Lactose, EnumProfile.Gluten }
+					Profiles =  EnumProfile.Lactose | EnumProfile.Gluten 
 				}
 			});
 		}
 
+		bool isLoading;
+		public bool IsLoading {
+			get {
+				return isLoading;
+			}
+			set {
+				isLoading = value;
+				Notify ("IsLoading");
+			}
+		}
+
 		public Product ProductDisplayed { get; set; }
-		IList UserRatings { get; set; }
+		public ObservableCollection<UserRating> UserRatings { get; set; }
 	}
 }
