@@ -22,15 +22,21 @@ namespace FazBem.ViewModels
 			}
 		}
 
-		public ProductDetailViewModel(){
-
-			ProductToBeRated = new Product()
-			{
-				Name = "Bolacha Maria"
-			};
-
-
+		string productDescription;
+		public string ProductDescription {
+			get {
+				return productDescription;
+			}
+			set {
+				productDescription = value;
+			}
+		}
+			
+		public ProductDetailViewModel()
+		{
 			this.Ratings = new ObservableCollection<UserRating> ();
+
+			FetchData ();
 		}
 
         public ObservableCollection<UserRating> Ratings { get; set; }
@@ -43,6 +49,32 @@ namespace FazBem.ViewModels
 
         public ICommand OpenCameraCommand { get; set; }
 
+		void FetchData ()
+		{
+			ProductToBeRated = new Product () {
+				Name = "Bolacha Maria"
+			};
+			User user = new User () {
+				Name = "Mauricio Minella"
+			};
+			user.Profiles = EnumProfile.Gluten | EnumProfile.Lactose;
 
+            foreach (EnumProfile item in GetFlags(user.Profiles))
+            {
+                this.Ratings.Add(new UserRating()
+                {
+                    Product = ProductToBeRated,
+                    User = user,
+                    Profile = item
+                });
+            }		
+		}
+
+        static IEnumerable<Enum> GetFlags(Enum input)
+        {
+            foreach (Enum value in Enum.GetValues(input.GetType()))
+                if (input.HasFlag(value))
+                    yield return value;
+        }
     }
 }

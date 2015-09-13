@@ -22,7 +22,7 @@ namespace FazBem
                 Name = "Rodrigo Wirth",
                 Profiles = EnumProfile.Gluten | EnumProfile.Lactose
             };
-
+		
             IUserRepository userRepository = DependencyService.Get<IUserRepository>();
 
             var users = userRepository.List();
