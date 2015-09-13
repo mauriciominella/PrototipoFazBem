@@ -22,7 +22,7 @@
     <MandroidI18n />
     <JavaMaximumHeapSize />
     <JavaOptions />
-    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -93,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\LactoseGreen.png" />
+    <AndroidResource Include="Resources\drawable\LactoseNeutral.png" />
+    <AndroidResource Include="Resources\drawable\LactoseRed.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FazBem\FazBem.csproj">
