@@ -11,6 +11,11 @@ namespace FazBem.ViewModels
 {
     public class ProductDetailViewModel : ViewModelBase
     {
+        public ProductDetailViewModel(Product productToBeRated)
+        {
+            this.ProductToBeRated = productToBeRated;
+        }
+
         public ObservableCollection<UserRating> Ratings { get; set; }
 
         public Product ProductToBeRated { get; set; }
@@ -18,6 +23,9 @@ namespace FazBem.ViewModels
         public ICommand LikeCommand { get; set; }
 
         public ICommand UnlinkeCommand { get; set; }
+
+        public ICommand OpenCameraCommand { get; set; }
+
 
     }
 }
