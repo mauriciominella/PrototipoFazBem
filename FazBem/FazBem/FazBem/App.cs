@@ -1,5 +1,6 @@
 ﻿using FazBem.Models;
 using FazBem.Repositories;
+using FazBem.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace FazBem
             DependencyService.Register<ViewModels.Services.IMessageService, Views.Services.MessageService>();
             DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
             DependencyService.Register<IUserRepository, UserRepository>();
+            DependencyService.Register<IProductService, ProductService>();
 
             var user = new User
             {
