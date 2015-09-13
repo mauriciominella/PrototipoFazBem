@@ -14,5 +14,9 @@ namespace FazBem.Views.Services
             //await FazBem.App.Current.MainPage.Navigation.PushAsync(new Views.LoginView());
         }
 
+        public async System.Threading.Tasks.Task NavigateToProductDetail()
+        {
+            await FazBem.App.Current.MainPage.Navigation.PushAsync(new Views.ProductDetailView());
+        }
     }
 }
