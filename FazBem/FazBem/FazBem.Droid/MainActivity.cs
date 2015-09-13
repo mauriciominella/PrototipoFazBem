@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -20,6 +19,7 @@ namespace FazBem.Droid
             base.OnCreate(bundle);
 
             #region Resolver Init
+
             SimpleContainer container = new SimpleContainer();
             container.Register<IDevice>(t => AndroidDevice.CurrentDevice);
             container.Register<IDisplay>(t => t.Resolve<IDevice>().Display);
@@ -29,8 +29,23 @@ namespace FazBem.Droid
             #endregion
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+<<<<<<< HEAD
 			LoadApplication(new App());
+=======
+
+			SetStatusBarColor ();
+
+            LoadApplication(new App());
+>>>>>>> dcae67efd840a8b29a34c27bfc8855e3141753d2
         }
+
+		void SetStatusBarColor ()
+		{
+			if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
+				Window.AddFlags (WindowManagerFlags.DrawsSystemBarBackgrounds);
+				Window.SetStatusBarColor (Resources.GetColor (Resource.Color.StatusBarColor));
+			}
+		}
     }
 }
 
