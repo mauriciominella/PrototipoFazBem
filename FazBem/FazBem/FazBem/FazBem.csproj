@@ -46,14 +46,23 @@
     <Compile Include="ViewModels\Services\IMessageService.cs" />
     <Compile Include="ViewModels\Services\INavigationService.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\CameraView.xaml.cs">
-      <DependentUpon>CameraView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ProductDetailView.xaml.cs">
       <DependentUpon>ProductDetailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Services\MessageService.cs" />
     <Compile Include="Views\Services\NavigationService.cs" />
+    <Compile Include="Views\CameraView.xaml.cs">
+      <DependentUpon>CameraView.xaml</DependentUpon>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Include="ViewModels\ProductCommentsViewModel.cs" />
+    <Compile Include="Views\ProductCommentsView.xaml.cs">
+      <DependentUpon>ProductCommentsView.xaml</DependentUpon>
+=======
+    <Compile Include="Views\FindYourProfile.xaml.cs">
+      <DependentUpon>FindYourProfile.xaml</DependentUpon>
+>>>>>>> e6e04da086fe2bacdac5fc1b84fac7e77aab60de
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -63,6 +72,13 @@
     <EmbeddedResource Include="Views\ProductDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Views\ProductCommentsView.xaml">
+=======
+    <EmbeddedResource Include="Views\FindYourProfile.xaml">
+>>>>>>> e6e04da086fe2bacdac5fc1b84fac7e77aab60de
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
