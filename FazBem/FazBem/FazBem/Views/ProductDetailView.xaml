@@ -3,20 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FazBem.Views.ProductDetailView">
 		<AbsoluteLayout>
-			<RelativeLayout x:Name="RootLayout">	
-			<Label Text="FazBem label" />
-				<StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Width, Factor=1}"
+			<RelativeLayout x:Name="RootLayout" BackgroundColor="White">	
+				<StackLayout Orientation="Vertical" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Width, Factor=1}"
 							RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Height, Factor=1}">
 
-						<ListView ItemsSource="{Binding Ratings}" RowHeight="75">
+
+						<ListView ItemsSource="{Binding Ratings}" RowHeight="190">
 							<ListView.ItemTemplate>
 								<DataTemplate>
 
 									<ViewCell>
 
-										<StackLayout>
+										<StackLayout Orientation="Horizontal" Padding="20">
 
-											<Image Source="LactoseNeutral.png" />
+											<StackLayout x:Name="StackImg" VerticalOptions="Center">
+												<Image Source="LactoseNeutral.png" />
+											</StackLayout>
+
+											<StackLayout Orientation="Vertical" HorizontalOptions="End" x:Name="StackRating">
+												<StackLayout Orientation="Horizontal" VerticalOptions="Center">
+													<Image Source="thumbs_up.png" />
+													<Label Text="15" />
+												</StackLayout>
+
+												<StackLayout Orientation="Horizontal" VerticalOptions="Center">
+													<Image Source="thumbs_down.png" />
+													<Label Text="27" />
+												</StackLayout>
+											</StackLayout>
 
 										</StackLayout>
 

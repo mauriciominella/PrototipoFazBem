@@ -19,7 +19,7 @@ namespace FazBem
 
 			MainPage = new NavigationPage(new FazBem.Views.ProductCommentsView());
 
-           // MainPage = new NavigationPage(new FazBem.Views.ProductDetailView());
+           //MainPage = new NavigationPage(new FazBem.Views.ProductDetailView());
 
         }
 

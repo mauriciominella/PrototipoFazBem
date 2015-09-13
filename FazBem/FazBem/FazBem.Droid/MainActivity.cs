@@ -25,18 +25,14 @@ namespace FazBem.Droid
             container.Register<IDisplay>(t => t.Resolve<IDevice>().Display);
             container.Register<INetwork>(t => t.Resolve<IDevice>().Network);
 
-            Resolver.SetResolver(container.GetResolver());
+            Resolver.SetResolver(container.GetResolver()); 
             #endregion
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-<<<<<<< HEAD
-			LoadApplication(new App());
-=======
 
 			SetStatusBarColor ();
 
             LoadApplication(new App());
->>>>>>> dcae67efd840a8b29a34c27bfc8855e3141753d2
         }
 
 		void SetStatusBarColor ()

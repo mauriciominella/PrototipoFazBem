@@ -27,9 +27,7 @@ namespace FazBem.ViewModels
 
 			UserRatings = new ObservableCollection<UserRating>();
 
-			this.Test = "This is a test";
-		
-			/*UserRatings.Add(new UserRating(){
+			UserRatings.Add(new UserRating(){
 				Id="1",
 				Like = true,
 				Comment="Me fez super bem",
@@ -51,19 +49,18 @@ namespace FazBem.ViewModels
 					Name = "Zé Colméia",
 					Profiles = { EnumProfile.Lactose, EnumProfile.Gluten }
 				}
-			});*/
+			});
 		}
 
-		string _test;
-		public string Test {
-			get{
-				return _test;
+		bool isLoading;
+		public bool IsLoading {
+			get {
+				return isLoading;
 			}
 			set {
-				_test = value;
-				base.Notify ("Test");
-					
-				}
+				isLoading = value;
+				Notify ("IsLoading");
+			}
 		}
 
 		public Product ProductDisplayed { get; set; }
