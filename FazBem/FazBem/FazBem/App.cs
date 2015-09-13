@@ -16,7 +16,7 @@ namespace FazBem
             DependencyService.Register<ViewModels.Services.IMessageService, Views.Services.MessageService>();
             DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
             DependencyService.Register<IUserRepository, UserRepository>();
-
+		
             var user = new User
             {
                 Name = "Rodrigo Wirth",

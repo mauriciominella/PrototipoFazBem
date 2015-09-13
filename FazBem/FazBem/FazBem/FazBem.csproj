@@ -64,6 +64,7 @@
       <DependentUpon>FindYourProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Converters\UserRatingToImagePathConverter.cs" />
+    <Compile Include="ViewModels\FindYourProfileViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -138,5 +139,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Converters\" />
+  </ItemGroup>
 </Project>
