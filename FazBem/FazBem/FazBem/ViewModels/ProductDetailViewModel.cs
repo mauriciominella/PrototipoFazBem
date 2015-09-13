@@ -21,6 +21,16 @@ namespace FazBem.ViewModels
 				Notify ("IsLoading");
 			}
 		}
+
+		string productDescription;
+		public string ProductDescription {
+			get {
+				return productDescription;
+			}
+			set {
+				productDescription = value;
+			}
+		}
 			
 		public ProductDetailViewModel()
 		{

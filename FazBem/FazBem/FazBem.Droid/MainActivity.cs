@@ -25,7 +25,7 @@ namespace FazBem.Droid
             container.Register<IDisplay>(t => t.Resolve<IDevice>().Display);
             container.Register<INetwork>(t => t.Resolve<IDevice>().Network);
 
-            Resolver.SetResolver(container.GetResolver());
+            Resolver.SetResolver(container.GetResolver()); 
             #endregion
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
