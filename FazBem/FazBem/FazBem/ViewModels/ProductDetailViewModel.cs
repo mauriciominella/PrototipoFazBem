@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace FazBem.ViewModels
 {
@@ -22,32 +23,69 @@ namespace FazBem.ViewModels
 			}
 		}
 
-		string productDescription;
+		string productDescription = "";
 		public string ProductDescription {
 			get {
 				return productDescription;
 			}
 			set {
 				productDescription = value;
+				Notify ("ProductDescription");
 			}
 		}
 			
 		public ProductDetailViewModel()
 		{
-			this.Ratings = new ObservableCollection<UserRating> ();
+			this.ProductRatings = new ObservableCollection<ProductRating> ();
+
+			this.LikeCommand = new Command<ProductRating> (p => Like(p));
+			this.UnlikeCommand = new Command<ProductRating> (p => Unlike(p));
 
 			FetchData ();
 		}
 
-        public ObservableCollection<UserRating> Ratings { get; set; }
+        public ObservableCollection<ProductRating> ProductRatings { get; set; }
 
         public Product ProductToBeRated { get; set; }
 
-        public ICommand LikeCommand { get; set; }
+		ICommand likeCommand;
+        public ICommand LikeCommand {
+			get {
+				return likeCommand;
+			}
+			set {
+				likeCommand = value;
+			}
+		}
 
-        public ICommand UnlinkeCommand { get; set; }
+		ICommand unlinkeCommand;
+        public ICommand UnlikeCommand {
+			get {
+				return unlinkeCommand;
+			}
+			set {
+				unlinkeCommand = value;
+			}
+		}
 
-        public ICommand OpenCameraCommand { get; set; }
+		ICommand openCameraCommand;
+        public ICommand OpenCameraCommand {
+			get {
+				return openCameraCommand;
+			}
+			set {
+				openCameraCommand = value;
+			}
+		}
+
+
+		void Like(ProductRating productRating){
+			productRating.LikeCount++;
+		}
+
+		void Unlike(ProductRating productRating){
+			productRating.UnlikeCount++;
+		}
 
 		void FetchData ()
 		{
@@ -57,16 +95,21 @@ namespace FazBem.ViewModels
 			User user = new User () {
 				Name = "Mauricio Minella"
 			};
+
+			this.ProductDescription = ProductToBeRated.Name;
+
+
 			user.Profiles.Add (EnumProfile.Gluten);
 			user.Profiles.Add (EnumProfile.Lactose);
 
             foreach (var item in user.Profiles)
             {
-                this.Ratings.Add(new UserRating()
+                this.ProductRatings.Add(new ProductRating()
                 {
                     Product = ProductToBeRated,
-                    User = user,
-                    Profile = item
+                    Profile = item,
+					LikeCount = 10,
+					UnlikeCount = 11,
                 });
             }
 		

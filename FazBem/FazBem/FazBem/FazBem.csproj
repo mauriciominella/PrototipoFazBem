@@ -62,6 +62,7 @@
       <DependentUpon>FindYourProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Converters\UserRatingToImagePathConverter.cs" />
+    <Compile Include="Models\ProductRating.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
