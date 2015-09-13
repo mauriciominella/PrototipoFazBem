@@ -21,6 +21,7 @@ namespace FazBem.ViewModels
 				Notify ();
 			}
 		}
+
 		public IList<EnumProfile> Profiles { get; protected set; }
 		
 		public FindYourProfileViewModel ()

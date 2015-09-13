@@ -88,6 +88,15 @@ namespace FazBem.Droid
 		public partial class Color
 		{
 			
+			// aapt resource value: 0x7f050012
+			public const int ListViewHighlighted = 2131034130;
+			
+			// aapt resource value: 0x7f050011
+			public const int ListViewSelected = 2131034129;
+			
+			// aapt resource value: 0x7f050010
+			public const int StatusBarColor = 2131034128;
+			
 			// aapt resource value: 0x7f050000
 			public const int calendar_active_month_bg = 2131034112;
 			
@@ -118,11 +127,26 @@ namespace FazBem.Droid
 			// aapt resource value: 0x7f050009
 			public const int calendar_text_selected = 2131034121;
 			
-			// aapt resource value: 0x7f05000b
-			public const int calendar_text_selector = 2131034123;
+			// aapt resource value: 0x7f050013
+			public const int calendar_text_selector = 2131034131;
 			
 			// aapt resource value: 0x7f05000a
 			public const int calendar_text_unselectable = 2131034122;
+			
+			// aapt resource value: 0x7f05000b
+			public const int my_blue = 2131034123;
+			
+			// aapt resource value: 0x7f05000e
+			public const int my_gray = 2131034126;
+			
+			// aapt resource value: 0x7f05000c
+			public const int my_green = 2131034124;
+			
+			// aapt resource value: 0x7f05000d
+			public const int my_purple = 2131034125;
+			
+			// aapt resource value: 0x7f05000f
+			public const int my_white = 2131034127;
 			
 			static Color()
 			{
@@ -185,6 +209,30 @@ namespace FazBem.Droid
 			
 			// aapt resource value: 0x7f020006
 			public const int monoandroidsplash = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int thumbs_down = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int thumbs_up = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int VeganGreen = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int VeganNeutral = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int VeganRed = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int WheatGreen = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int WheatNeutral = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int WheatRed = 2130837518;
 			
 			static Drawable()
 			{
@@ -289,6 +337,9 @@ namespace FazBem.Droid
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f070004
+			public const int AppStyle_Light = 2131165188;
+			
 			// aapt resource value: 0x7f070001
 			public const int CalendarCell = 2131165185;
 			
@@ -301,8 +352,8 @@ namespace FazBem.Droid
 			// aapt resource value: 0x7f070000
 			public const int CalendarTitle = 2131165184;
 			
-			// aapt resource value: 0x7f070004
-			public const int Mono_Android_Theme_Splash = 2131165188;
+			// aapt resource value: 0x7f070005
+			public const int Mono_Android_Theme_Splash = 2131165189;
 			
 			static Style()
 			{

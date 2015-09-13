@@ -4,11 +4,7 @@
              x:Class="FazBem.Views.CameraView">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Take Picture" Command="{Binding TakePictureCommand}" />
-            <Button Text="Select Image from Picture Library" Command="{Binding SelectPictureCommand}" />
-            <Button Text="Select Video from Picture Library " Command="{Binding SelectVideoCommand}" />
-            <Image Source="{Binding ImageSource}" VerticalOptions="CenterAndExpand" />
-            <Entry Text="{Binding VideoInfo}" VerticalOptions="CenterAndExpand" />
+            <Entry Text="Loading..." />            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

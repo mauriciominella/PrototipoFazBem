@@ -9,5 +9,7 @@ namespace FazBem.ViewModels.Services
     public interface INavigationService
     {
         Task NavigateToLogin();
+
+        Task NavigateToProductDetail();
     }
 }

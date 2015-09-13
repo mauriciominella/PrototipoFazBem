@@ -22,15 +22,21 @@ namespace FazBem.ViewModels
 			}
 		}
 
-		public ProductDetailViewModel(){
-
-			ProductToBeRated = new Product()
-			{
-				Name = "Bolacha Maria"
-			};
-
-
+		string productDescription;
+		public string ProductDescription {
+			get {
+				return productDescription;
+			}
+			set {
+				productDescription = value;
+			}
+		}
+			
+		public ProductDetailViewModel()
+		{
 			this.Ratings = new ObservableCollection<UserRating> ();
+
+			FetchData ();
 		}
 
         public ObservableCollection<UserRating> Ratings { get; set; }
@@ -43,6 +49,27 @@ namespace FazBem.ViewModels
 
         public ICommand OpenCameraCommand { get; set; }
 
+		void FetchData ()
+		{
+			ProductToBeRated = new Product () {
+				Name = "Bolacha Maria"
+			};
+			User user = new User () {
+				Name = "Mauricio Minella"
+			};
+			user.Profiles.Add (EnumProfile.Gluten);
+			user.Profiles.Add (EnumProfile.Lactose);
 
+            foreach (var item in user.Profiles)
+            {
+                this.Ratings.Add(new UserRating()
+                {
+                    Product = ProductToBeRated,
+                    User = user,
+                    Profile = item
+                });
+            }
+		
+		}
     }
 }

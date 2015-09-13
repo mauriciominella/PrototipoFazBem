@@ -8,6 +8,10 @@ namespace FazBem.Models
 {
     public class User
     {
+		public User(){
+			Profiles = new List<EnumProfile> ();
+		}
+
         public string Id { get; set; }
         public string Name { get; set; }
         public IList<EnumProfile> Profiles { get; set; }

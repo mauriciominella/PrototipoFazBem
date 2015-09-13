@@ -54,10 +54,14 @@
     <Compile Include="Views\CameraView.xaml.cs">
       <DependentUpon>CameraView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\ProductCommentsViewModel.cs" />
+    <Compile Include="Views\ProductCommentsView.xaml.cs">
+      <DependentUpon>ProductCommentsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FindYourProfile.xaml.cs">
       <DependentUpon>FindYourProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Converters\EnableImageConverter.cs" />
+    <Compile Include="Views\Converters\UserRatingToImagePathConverter.cs" />
     <Compile Include="ViewModels\FindYourProfileViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +72,9 @@
     <EmbeddedResource Include="Views\ProductDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductCommentsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FindYourProfile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

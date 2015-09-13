@@ -110,18 +110,24 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\values\colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\VeganGreen.png" />
+    <AndroidResource Include="Resources\drawable\VeganNeutral.png" />
+    <AndroidResource Include="Resources\drawable\VeganRed.png" />
+    <AndroidResource Include="Resources\drawable\WheatGreen.png" />
+    <AndroidResource Include="Resources\drawable\WheatNeutral.png" />
+    <AndroidResource Include="Resources\drawable\WheatRed.png" />
+    <AndroidResource Include="Resources\drawable\thumbs_up.png" />
+    <AndroidResource Include="Resources\drawable\thumbs_down.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\drawable\LactoseGreen.png" />
     <AndroidResource Include="Resources\drawable\LactoseNeutral.png" />
     <AndroidResource Include="Resources\drawable\LactoseRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FazBem\FazBem.csproj">
-      <Name>FazBem</Name>
-      <Project>{E9A1329F-2E4B-476B-A283-13838FA196A4}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.4.4.6392\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.4.6392\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -132,4 +138,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\FazBem\FazBem.csproj">
+      <Project>{E9A1329F-2E4B-476B-A283-13838FA196A4}</Project>
+      <Name>FazBem</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
