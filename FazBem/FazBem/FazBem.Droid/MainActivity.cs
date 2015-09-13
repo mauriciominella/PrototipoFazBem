@@ -9,6 +9,7 @@ using Android.OS;
 using XLabs.Ioc;
 using XLabs.Platform.Device;
 using XLabs.Platform.Services;
+using Xamarin.Forms;
 
 namespace FazBem.Droid
 {

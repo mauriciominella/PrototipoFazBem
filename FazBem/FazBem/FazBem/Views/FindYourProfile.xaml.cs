@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using XLabs.Forms.Controls;
+using XLabs.Enums;
 
 namespace FazBem.Views
 {
@@ -10,6 +12,8 @@ namespace FazBem.Views
 		public FindYourProfile ()
 		{
 			InitializeComponent ();
+
+			BindingContext = new ViewModels.FindYourProfileViewModel ();
 		}
 	}
 }

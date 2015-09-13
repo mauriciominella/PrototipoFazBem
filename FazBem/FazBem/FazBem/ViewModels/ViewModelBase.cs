@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Runtime.CompilerServices;
 
 namespace FazBem.ViewModels
 {
@@ -25,7 +26,7 @@ namespace FazBem.ViewModels
 
         #endregion
 
-        protected void Notify(string propertyName)
+        protected void Notify([CallerMemberName] string propertyName = "")
         {
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));

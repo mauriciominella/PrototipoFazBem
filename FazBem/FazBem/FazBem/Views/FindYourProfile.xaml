@@ -1,12 +1,45 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FazBem.Views.FindYourProfile">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+			 xmlns:icons="clr-namespace:XLabs.Forms.Helpers;assembly=XLabs.Forms"
+			 x:Class="FazBem.Views.FindYourProfile">
 	<ContentPage.Content>
 	<StackLayout Padding="30" HorizontalOptions="Center">
-		<Label Text="Bem vindo ao FazBemApp!" FontSize="25"></Label>
-		<Label Text="Escolha o seu perfil!" FontSize="15"></Label>
+		<Label Text="{Binding MainText}" FontSize="25"></Label>
+		<Label Text="{Binding Description}" FontSize="15"></Label>
 		<StackLayout Orientation="Horizontal" VerticalOptions="Center">
-			<Image Source="LactoseNeutral.png"></Image>
-			<Image Source="LactoseNeutral.png"></Image>
+			<controls:ImageButton x:Name="LactoseButton" 
+									Text="Lactose"
+									ImageHeightRequest="150" 
+									ImageWidthRequest="150" 
+									BackgroundColor="#a2e2ef"
+									HorizontalOptions="FillAndExpand"
+									Orientation="ImageOnBottom"
+									DisabledSource="LactoseNeutral.png"
+									Source="{Binding LactoseImage}">
+			</controls:ImageButton>
+			<controls:ImageButton x:Name="GlutenButton" 
+									Text="Gluten"
+									ImageHeightRequest="150" 
+									ImageWidthRequest="150" 
+									BackgroundColor="#a2e2ef"
+									HorizontalOptions="FillAndExpand"
+									Orientation="ImageOnBottom">
+			    <controls:ImageButton.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <OnPlatform.iOS>
+                            <FileImageSource File="LactoseGreen.png" />
+                        </OnPlatform.iOS>
+                        <OnPlatform.Android>
+                            <FileImageSource File="LactoseGreen.png" />
+                        </OnPlatform.Android>
+                        <OnPlatform.WinPhone>
+                            <FileImageSource File="Images/LactoseGreen.png" />
+                        </OnPlatform.WinPhone>
+                    </OnPlatform>
+                </controls:ImageButton.Source>
+			</controls:ImageButton>
 		</StackLayout>
 		<StackLayout Orientation="Horizontal">
 			<Image Source="LactoseNeutral.png"></Image>
