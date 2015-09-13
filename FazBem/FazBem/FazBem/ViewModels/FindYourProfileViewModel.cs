@@ -8,8 +8,16 @@ namespace FazBem.ViewModels
 {
 	public class FindYourProfileViewModel : ViewModelBase
 	{
+		#region Attributes
+
 		private string _lactoseImage;
+
+		#endregion
+
+		#region Properties
+
 		public string MainText { get; protected set; }
+
 		public string Description { get; set; }
 
 		public string LactoseImage {
@@ -23,6 +31,8 @@ namespace FazBem.ViewModels
 		}
 
 		public IList<EnumProfile> Profiles { get; protected set; }
+
+		#endregion
 		
 		public FindYourProfileViewModel ()
 		{

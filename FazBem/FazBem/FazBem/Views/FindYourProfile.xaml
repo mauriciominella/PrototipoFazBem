@@ -13,7 +13,6 @@
 									Text="Lactose"
 									ImageHeightRequest="150" 
 									ImageWidthRequest="150" 
-									BackgroundColor="#a2e2ef"
 									HorizontalOptions="FillAndExpand"
 									Orientation="ImageOnBottom"
 									DisabledSource="LactoseNeutral.png"
@@ -23,7 +22,6 @@
 									Text="Gluten"
 									ImageHeightRequest="150" 
 									ImageWidthRequest="150" 
-									BackgroundColor="#a2e2ef"
 									HorizontalOptions="FillAndExpand"
 									Orientation="ImageOnBottom">
 			    <controls:ImageButton.Source>
