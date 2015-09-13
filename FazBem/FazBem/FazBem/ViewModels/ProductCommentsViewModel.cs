@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Collections;
+using System.ComponentModel;
 
 namespace FazBem.ViewModels
 {
@@ -18,12 +19,15 @@ namespace FazBem.ViewModels
 
 		public ProductCommentsViewModel()
 		{
+			
 			ProductDisplayed = new Product()
 			{
 				Name = "Bolacha Maria"
 			};
 
 			UserRatings = new ObservableCollection<UserRating>();
+
+			this.Test = "This is a test";
 		
 			/*UserRatings.Add(new UserRating(){
 				Id="1",
@@ -50,7 +54,18 @@ namespace FazBem.ViewModels
 			});*/
 		}
 
-		public string Test = "test bind";
+		string _test;
+		public string Test {
+			get{
+				return _test;
+			}
+			set {
+				_test = value;
+				base.Notify ("Test");
+					
+				}
+		}
+
 		public Product ProductDisplayed { get; set; }
 		public ObservableCollection<UserRating> UserRatings { get; set; }
 	}
