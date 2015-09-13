@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FazBem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,20 +12,11 @@ namespace FazBem
     {
         public App()
         {
+            DependencyService.Register<ViewModels.Services.IMessageService, Views.Services.MessageService>();
+            DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
+		
             // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
+           // MainPage = new NavigationPage(new FazBem.Views.ProductDetailView());
         }
 
         protected override void OnStart()
