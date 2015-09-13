@@ -120,4 +120,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\FazBem\FazBem.csproj">
+      <Project>{E9A1329F-2E4B-476B-A283-13838FA196A4}</Project>
+      <Name>FazBem</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

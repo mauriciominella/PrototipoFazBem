@@ -23,9 +23,9 @@ namespace FazBem.ViewModels
 				Name = "Bolacha Maria"
 			};
 
-			UserRatings = new List<UserRating> ();
+			UserRatings = new ObservableCollection<UserRating>();
 		
-			UserRatings.Add(new UserRating(){
+			/*UserRatings.Add(new UserRating(){
 				Id="1",
 				Like = true,
 				Comment="Me fez super bem",
@@ -47,10 +47,11 @@ namespace FazBem.ViewModels
 					Name = "Zé Colméia",
 					Profiles = { EnumProfile.Lactose, EnumProfile.Gluten }
 				}
-			});
+			});*/
 		}
 
+		public string Test = "test bind";
 		public Product ProductDisplayed { get; set; }
-		IList UserRatings { get; set; }
+		public ObservableCollection<UserRating> UserRatings { get; set; }
 	}
 }

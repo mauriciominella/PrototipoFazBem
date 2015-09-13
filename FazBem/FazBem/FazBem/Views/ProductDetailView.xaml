@@ -4,7 +4,7 @@
              x:Class="FazBem.Views.ProductDetailView">
 		<AbsoluteLayout>
 			<RelativeLayout x:Name="RootLayout">	
-			<Label Text="FazBem label"/>
+			<Label Text="FazBem label" />
 				<StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Width, Factor=1}"
 							RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Height, Factor=1}">
 

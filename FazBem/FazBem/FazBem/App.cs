@@ -16,7 +16,7 @@ namespace FazBem
             DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
 		
             // The root page of your application
-			MainPage = new NavigationPage(new FazBem.Views.FindYourProfile());
+			MainPage = new NavigationPage(new FazBem.Views.ProductCommentsView());
         }
 
         protected override void OnStart()

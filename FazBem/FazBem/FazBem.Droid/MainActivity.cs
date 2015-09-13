@@ -29,7 +29,7 @@ namespace FazBem.Droid
             #endregion
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+			LoadApplication(new App());
         }
     }
 }
