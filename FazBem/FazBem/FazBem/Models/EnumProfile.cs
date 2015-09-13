@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace FazBem.Models
 {
+    [Flags]
     public enum EnumProfile
     {
-        Lactose = 1,
-        Gluten = 2,
-        Vegano = 3
+        Lactose = 0,
+        Gluten = 1,
+        Vegano = 2
     }
 }

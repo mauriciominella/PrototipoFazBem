@@ -8,6 +8,9 @@ using Android.OS;
 using XLabs.Ioc;
 using XLabs.Platform.Device;
 using XLabs.Platform.Services;
+using FazBem.Repositories;
+using FazBem.Interfaces;
+using FazBem.Droid.Implementations;
 
 namespace FazBem.Droid
 {
@@ -24,6 +27,7 @@ namespace FazBem.Droid
             container.Register<IDevice>(t => AndroidDevice.CurrentDevice);
             container.Register<IDisplay>(t => t.Resolve<IDevice>().Display);
             container.Register<INetwork>(t => t.Resolve<IDevice>().Network);
+            container.Register<ISQLite>(typeof(SQLiteAndroid));
 
             Resolver.SetResolver(container.GetResolver()); 
             #endregion
@@ -32,7 +36,7 @@ namespace FazBem.Droid
 
 			SetStatusBarColor ();
 
-            LoadApplication(new App());
+			LoadApplication(new App());
         }
 
 		void SetStatusBarColor ()
