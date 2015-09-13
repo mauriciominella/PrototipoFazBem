@@ -109,10 +109,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Views\CameraView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
