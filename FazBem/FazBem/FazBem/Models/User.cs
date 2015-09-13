@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,9 @@ namespace FazBem.Models
 {
     public class User
     {
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Name { get; set; }
-        public IList<EnumProfile> Profiles { get; set; }
+        public EnumProfile Profiles { get; set; }
     }
 }
