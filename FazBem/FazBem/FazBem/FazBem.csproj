@@ -54,14 +54,12 @@
     <Compile Include="Views\CameraView.xaml.cs">
       <DependentUpon>CameraView.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="ViewModels\ProductCommentsViewModel.cs" />
     <Compile Include="Views\ProductCommentsView.xaml.cs">
       <DependentUpon>ProductCommentsView.xaml</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Views\FindYourProfile.xaml.cs">
       <DependentUpon>FindYourProfile.xaml</DependentUpon>
->>>>>>> e6e04da086fe2bacdac5fc1b84fac7e77aab60de
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -73,11 +71,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Views\ProductCommentsView.xaml">
-=======
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FindYourProfile.xaml">
->>>>>>> e6e04da086fe2bacdac5fc1b84fac7e77aab60de
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -109,10 +106,6 @@
     <Reference Include="XLabs.Serialization, Version=2.0.5679.29810, Culture=neutral, PublicKeyToken=d65109b36e5040e4">
       <HintPath>..\..\packages\XLabs.Serialization.2.0.5679\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\CameraView.xaml">
