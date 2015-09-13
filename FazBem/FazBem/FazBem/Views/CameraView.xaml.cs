@@ -12,7 +12,7 @@ namespace FazBem.Views
     {
         public CameraView()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
