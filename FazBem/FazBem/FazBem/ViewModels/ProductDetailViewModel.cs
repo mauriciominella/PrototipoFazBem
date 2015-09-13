@@ -57,10 +57,9 @@ namespace FazBem.ViewModels
 			User user = new User () {
 				Name = "Mauricio Minella"
 			};
-			user.Profiles.Add (EnumProfile.Gluten);
-			user.Profiles.Add (EnumProfile.Lactose);
+			user.Profiles = EnumProfile.Gluten | EnumProfile.Lactose;
 
-            foreach (var item in user.Profiles)
+            foreach (EnumProfile item in GetFlags(user.Profiles))
             {
                 this.Ratings.Add(new UserRating()
                 {
@@ -68,8 +67,14 @@ namespace FazBem.ViewModels
                     User = user,
                     Profile = item
                 });
-            }
-		
+            }		
 		}
+
+        static IEnumerable<Enum> GetFlags(Enum input)
+        {
+            foreach (Enum value in Enum.GetValues(input.GetType()))
+                if (input.HasFlag(value))
+                    yield return value;
+        }
     }
 }
