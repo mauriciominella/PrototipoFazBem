@@ -100,6 +100,24 @@ namespace FazBem.Droid
 			// aapt resource value: 0x7f020004
 			public const int monoandroidsplash = 2130837508;
 			
+			// aapt resource value: 0x7f020005
+			public const int VeganGreen = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int VeganNeutral = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int VeganRed = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int WheatGreen = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int WheatNeutral = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int WheatRed = 2130837514;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
