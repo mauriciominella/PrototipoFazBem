@@ -28,6 +28,8 @@ namespace FazBem.Droid
 		{
 			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::FazBem.Droid.Resource.String.ApplicationName;
 			global::Xamarin.Forms.Platform.Resource.String.Hello = global::FazBem.Droid.Resource.String.Hello;
+			global::XLabs.Platform.Resource.String.ApplicationName = global::FazBem.Droid.Resource.String.ApplicationName;
+			global::XLabs.Platform.Resource.String.Hello = global::FazBem.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
