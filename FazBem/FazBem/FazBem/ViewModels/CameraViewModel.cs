@@ -1,10 +1,10 @@
-﻿using FazBem.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XLabs.Forms.Mvvm;
 using XLabs.Forms.Mvvm;
 using XLabs.Ioc;
 using XLabs.Platform.Device;
@@ -12,7 +12,6 @@ using XLabs.Platform.Services.Media;
 
 namespace FazBem.ViewModels
 {
-    [ViewType(typeof(CameraView))]
     public class CameraViewModel : ViewModel
     {
         /// <summary>
