@@ -36,7 +36,7 @@ namespace FazBem.Droid
 
 			SetStatusBarColor ();
 
-            LoadApplication(new App());
+			LoadApplication(new App());
         }
 
 		void SetStatusBarColor ()

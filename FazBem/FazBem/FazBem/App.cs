@@ -24,14 +24,16 @@ namespace FazBem
                 Name = "Rodrigo Wirth",
                 Profiles = EnumProfile.Gluten | EnumProfile.Lactose
             };
-		
+
             IUserRepository userRepository = DependencyService.Get<IUserRepository>();
 
-            var users = userRepository.List();
+           var users = userRepository.List();
             if (users.Count == 0)
                 MainPage = new NavigationPage(new FazBem.Views.FindYourProfile());
             else
                 MainPage = new NavigationPage(new FazBem.Views.CameraView());
+
+			//MainPage = new NavigationPage(new FazBem.Views.ProductCommentsView());
         }
 
         protected override void OnStart()
