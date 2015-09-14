@@ -9,7 +9,6 @@ namespace FazBem.Models
 {
     public class User
     {
-        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Name { get; set; }
         public EnumProfile Profiles { get; set; }

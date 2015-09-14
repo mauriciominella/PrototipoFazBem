@@ -43,6 +43,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Services\IProductService.cs" />
     <Compile Include="ViewModels\CameraViewModel.cs" />
     <Compile Include="ViewModels\ProductDetailViewModel.cs" />
     <Compile Include="ViewModels\Services\IMessageService.cs" />
@@ -64,6 +65,7 @@
       <DependentUpon>FindYourProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Converters\UserRatingToImagePathConverter.cs" />
+    <Compile Include="Models\ProductRating.cs" />
     <Compile Include="ViewModels\FindYourProfileViewModel.cs" />
     <Compile Include="Common\Resources.cs" />
   </ItemGroup>

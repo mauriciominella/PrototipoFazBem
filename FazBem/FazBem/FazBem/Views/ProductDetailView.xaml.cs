@@ -14,7 +14,6 @@ namespace FazBem.Views
         public ProductDetailView()
         {
             InitializeComponent();
-
             this.BindingContext = new ProductDetailViewModel();
         }
     }

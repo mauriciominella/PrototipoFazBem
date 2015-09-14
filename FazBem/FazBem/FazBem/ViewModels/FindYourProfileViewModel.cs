@@ -9,7 +9,7 @@ using System.Windows.Input;
 namespace FazBem.ViewModels
 {
 	public class FindYourProfileViewModel : ViewModelBase
-	{		
+	{
 		#region Attributes
 
 		private string _lactoseImage;
@@ -79,7 +79,7 @@ namespace FazBem.ViewModels
 		public IList<EnumProfile> Profiles { get; protected set; }
 
 		#endregion
-
+		
 		#region Constructors
 
 		public FindYourProfileViewModel ()

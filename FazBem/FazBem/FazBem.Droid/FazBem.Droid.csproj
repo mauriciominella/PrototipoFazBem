@@ -130,6 +130,7 @@
     <AndroidResource Include="Resources\drawable\WheatRed.png" />
     <AndroidResource Include="Resources\drawable\thumbs_up.png" />
     <AndroidResource Include="Resources\drawable\thumbs_down.png" />
+    <AndroidResource Include="Resources\drawable\PhotoProfile.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
@@ -139,7 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FazBem\FazBem.csproj">
-      <Project>{e9a1329f-2e4b-476b-a283-13838fa196a4}</Project>
+      <Project>{E9A1329F-2E4B-476B-A283-13838FA196A4}</Project>
       <Name>FazBem</Name>
     </ProjectReference>
   </ItemGroup>
@@ -152,10 +153,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <ProjectReference Include="..\FazBem\FazBem.csproj">
-      <Project>{E9A1329F-2E4B-476B-A283-13838FA196A4}</Project>
-      <Name>FazBem</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

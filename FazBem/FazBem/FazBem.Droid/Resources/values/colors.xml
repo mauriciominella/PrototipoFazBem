@@ -6,6 +6,6 @@
     <color name="my_gray">#738182</color>
     <color name="my_white">#FFFFFF</color>
     <color name="StatusBarColor">#3A7DAA</color>
-     <color name="ListViewSelected">#96BCE3</color>
+     <color name="ListViewSelected">#FFFFFF</color>
   <color name="ListViewHighlighted">#E39696</color>
 </resources>

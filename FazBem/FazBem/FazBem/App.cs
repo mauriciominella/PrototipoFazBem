@@ -1,5 +1,4 @@
 ﻿using FazBem.Models;
-using FazBem.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,6 @@ namespace FazBem
         {
             DependencyService.Register<ViewModels.Services.IMessageService, Views.Services.MessageService>();
             DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
-            DependencyService.Register<IUserRepository, UserRepository>();
 		
 //            var user = new User
 //            {

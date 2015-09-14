@@ -9,7 +9,7 @@
 	<StackLayout Padding="30" HorizontalOptions="Center">
 		<Label Text="{Binding MainText}" FontSize="25"></Label>
 		<Label Text="{Binding Description}" FontSize="15"></Label>
-		<StackLayout Orientation="Horizontal" VerticalOptions="Center">
+		<StackLayout Orientation="Horizontal" Padding="20">
 			<controls:ImageButton x:Name="LactoseButton" 
 									Text="Lactose"
 									BackgroundColor="#00FFFFFF"
@@ -33,7 +33,7 @@
 									CommandParameter="{x:Static models:EnumProfile.Wheat }">
 			</controls:ImageButton>
 		</StackLayout>
-		<StackLayout Orientation="Horizontal">
+		<StackLayout Orientation="Horizontal" Padding="20">
 			<controls:ImageButton x:Name="VeganButton" 
 									Text="Vegano"
 									BackgroundColor="#00FFFFFF"

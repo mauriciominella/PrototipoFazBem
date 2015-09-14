@@ -1,5 +1,42 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FazBem.ProductCommentsView">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FazBem.Views.ProductCommentsView">
 	<ContentPage.Content>
+	<AbsoluteLayout>
+			<RelativeLayout x:Name="RootLayout">	
+				<StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Width, Factor=1}"
+							RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Height, Factor=1}">
+
+						<ListView ItemsSource="{Binding UserRatings}" RowHeight="75">
+							<ListView.ItemTemplate>
+								<DataTemplate>
+
+									<ViewCell>
+
+										<StackLayout Orientation="Vertical">
+
+											<StackLayout  Orientation="Horizontal" x:Name="StackImg" VerticalOptions="Start">
+											   <Image Source="PhotoProfile.png" HeightRequest="40" WidthRequest="40"/>
+									        	<Image Source="thumbs_up.png" HeightRequest="20" WidthRequest="20"/>
+									        	<Label Text="{Binding User.Name}" YAlign="Center" FontSize="Small" />
+				        					</StackLayout>
+
+
+			        					</StackLayout>
+
+									</ViewCell>
+
+								</DataTemplate>
+							</ListView.ItemTemplate>
+						</ListView>
+
+				</StackLayout>
+
+
+				<ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"  Color="#3498DB"
+					    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Width, Factor=0.45}"
+						RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Height, Factor=0.2}"
+					/>
+			</RelativeLayout>
+		</AbsoluteLayout>
 	</ContentPage.Content>
 </ContentPage>
