@@ -35,7 +35,7 @@ namespace FazBem.ViewModels
 				User=new User(){
 					Id="1",
 					Name="Zé Carioca",
-					Profiles = EnumProfile.Lactose | EnumProfile.Gluten 
+					Profiles = EnumProfile.Lactose | EnumProfile.Wheat
 				}
 			});
 				
@@ -47,7 +47,7 @@ namespace FazBem.ViewModels
 				User = new User () {
 					Id = "21",
 					Name = "Zé Colméia",
-					Profiles =  EnumProfile.Lactose | EnumProfile.Gluten 
+					Profiles =  EnumProfile.Lactose | EnumProfile.Wheat 
 				}
 			});
 		}

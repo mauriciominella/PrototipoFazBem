@@ -113,8 +113,7 @@ namespace FazBem.ViewModels
 
 			this.ProductDescription = ProductToBeRated.Name;
 
-
-			user.Profiles  = EnumProfile.Gluten | EnumProfile.Lactose;
+			user.Profiles = EnumProfile.Wheat | EnumProfile.Lactose;
 
             foreach (EnumProfile item in GetFlags(user.Profiles))
             {

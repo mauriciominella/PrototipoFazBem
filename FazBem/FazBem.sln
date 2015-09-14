@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "FazBem", "FazBem\FazBem\FazBem.csproj", "{E9A1329F-2E4B-476B-A283-13838FA196A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FazBem", "FazBem\FazBem\FazBem.csproj", "{E9A1329F-2E4B-476B-A283-13838FA196A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FazBem.iOS", "FazBem\FazBem.iOS\FazBem.iOS.csproj", "{53577635-4C99-44A3-92F0-7A402EF8BBC0}"
 EndProject
