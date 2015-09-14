@@ -34,11 +34,12 @@
 								</StackLayout>
 
 								</StackLayout>
-							
+													
 							</ViewCell>
 						</DataTemplate>
 					</ListView.ItemTemplate>
 				</ListView>
+				<Button Text="See comments" Command="{Binding ProductCommentsCommand}"></Button>
 			</StackLayout>
 			<ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" Color="#3498DB" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Width, Factor=0.45}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Height, Factor=0.2}" />
 		</RelativeLayout>

@@ -3,6 +3,7 @@ using FazBem.ViewModels;
 using System.Collections.Generic;
 using FazBem.Models;
 using Xamarin.Forms;
+using System.Windows.Input;
 
 namespace FazBem.ViewModels
 {
@@ -30,6 +31,12 @@ namespace FazBem.ViewModels
 			}
 		}
 
+		public ICommand OpenCameraCommand {
+			get;
+			set;
+		}
+
+
 		public IList<EnumProfile> Profiles { get; protected set; }
 
 		#endregion
@@ -41,6 +48,12 @@ namespace FazBem.ViewModels
 			LactoseImage = "LactoseGreen.png";
 
 			Profiles = new List<EnumProfile> ();
+
+			this.OpenCameraCommand = new Command (OpenCamera);
+		}
+
+		private void OpenCamera(){
+			_navigationService.NavigateToCamera ();
 		}
 	}
 }

@@ -43,7 +43,7 @@
 			<Image Source="LactoseNeutral.png"></Image>
 			<Image Source="LactoseNeutral.png"></Image>
 		</StackLayout>
-		<Button Text="Continuar"></Button>
+		<Button Text="Continuar" Command="{Binding OpenCameraCommand}"></Button>
 	</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

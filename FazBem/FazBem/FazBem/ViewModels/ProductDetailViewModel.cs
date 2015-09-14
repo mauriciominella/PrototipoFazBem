@@ -40,6 +40,7 @@ namespace FazBem.ViewModels
 
 			this.LikeCommand = new Command<ProductRating> (p => Like(p));
 			this.UnlikeCommand = new Command<ProductRating> (p => Unlike(p));
+			this.ProductCommentsCommand = new Command (ProductComments);
 
 			FetchData ();
 		}
@@ -78,6 +79,16 @@ namespace FazBem.ViewModels
 			}
 		}
 
+		ICommand productCommentsCommand;
+		public ICommand ProductCommentsCommand {
+			get {
+				return productCommentsCommand;
+			}
+			set {
+				productCommentsCommand = value;
+			}
+		}
+
 
 		void Like(ProductRating productRating){
 			productRating.LikeCount++;
@@ -85,6 +96,10 @@ namespace FazBem.ViewModels
 
 		void Unlike(ProductRating productRating){
 			productRating.UnlikeCount++;
+		}
+
+		void ProductComments(){
+			_navigationService.NavigateToProductComment ();
 		}
 
 		void FetchData ()
@@ -99,8 +114,7 @@ namespace FazBem.ViewModels
 			this.ProductDescription = ProductToBeRated.Name;
 
 
-			user.Profiles  = EnumProfile.Gluten | EnumProfile.Lactose
-;
+			user.Profiles  = EnumProfile.Gluten | EnumProfile.Lactose;
 
             foreach (EnumProfile item in GetFlags(user.Profiles))
             {

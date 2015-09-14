@@ -11,5 +11,9 @@ namespace FazBem.ViewModels.Services
         Task NavigateToLogin();
 
         Task NavigateToProductDetail();
+
+		Task NavigateToCamera();
+
+		Task NavigateToProductComment();
     }
 }

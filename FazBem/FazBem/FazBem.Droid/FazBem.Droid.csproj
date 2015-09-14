@@ -130,6 +130,7 @@
     <AndroidResource Include="Resources\drawable\thumbs_up.png" />
     <AndroidResource Include="Resources\drawable\thumbs_down.png" />
     <AndroidResource Include="Resources\drawable\PhotoProfile.png" />
+    <AndroidResource Include="Resources\drawable\ic_launcher.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />

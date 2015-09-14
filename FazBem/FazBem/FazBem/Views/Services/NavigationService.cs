@@ -18,5 +18,16 @@ namespace FazBem.Views.Services
         {
             await FazBem.App.Current.MainPage.Navigation.PushAsync(new Views.ProductDetailView());
         }
+
+		public async System.Threading.Tasks.Task NavigateToCamera()
+		{
+			await FazBem.App.Current.MainPage.Navigation.PushAsync(new Views.CameraView());
+		}
+
+		public async System.Threading.Tasks.Task NavigateToProductComment()
+		{
+			await FazBem.App.Current.MainPage.Navigation.PushAsync(new Views.ProductCommentsView());
+		}
+
     }
 }
