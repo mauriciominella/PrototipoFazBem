@@ -57,7 +57,7 @@ namespace FazBem.ViewModels
 			User user = new User () {
 				Name = "Mauricio Minella"
 			};
-			user.Profiles = EnumProfile.Gluten | EnumProfile.Lactose;
+			user.Profiles = EnumProfile.Wheat | EnumProfile.Lactose;
 
             foreach (EnumProfile item in GetFlags(user.Profiles))
             {

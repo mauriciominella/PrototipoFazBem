@@ -20,9 +20,9 @@ namespace FazBem.Views.Converters
                 {
                     case EnumProfile.Lactose:
                         break;
-                    case EnumProfile.Gluten:
+                    case EnumProfile.Wheat:
                         break;
-                    case EnumProfile.Vegano:
+                    case EnumProfile.Vegan:
                         break;
                     default:
                         break;

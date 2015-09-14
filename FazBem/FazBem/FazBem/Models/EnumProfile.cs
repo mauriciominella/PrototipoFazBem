@@ -10,7 +10,7 @@ namespace FazBem.Models
     public enum EnumProfile
     {
         Lactose = 0,
-        Gluten = 1,
-        Vegano = 2
+        Wheat = 1,
+        Vegan = 2
     }
 }

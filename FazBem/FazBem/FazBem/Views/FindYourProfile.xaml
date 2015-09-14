@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:models="clr-namespace:FazBem.Models"
 			 xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
 			 xmlns:icons="clr-namespace:XLabs.Forms.Helpers;assembly=XLabs.Forms"
 			 x:Class="FazBem.Views.FindYourProfile">
@@ -11,37 +12,47 @@
 		<StackLayout Orientation="Horizontal" VerticalOptions="Center">
 			<controls:ImageButton x:Name="LactoseButton" 
 									Text="Lactose"
+									BackgroundColor="#00FFFFFF"
 									ImageHeightRequest="150" 
 									ImageWidthRequest="150" 
 									HorizontalOptions="FillAndExpand"
 									Orientation="ImageOnBottom"
-									DisabledSource="LactoseNeutral.png"
-									Source="{Binding LactoseImage}">
+									Source="{Binding LactoseImage}"
+									Command="{Binding LactoseCommand}"
+									CommandParameter="{x:Static models:EnumProfile.Lactose }">
 			</controls:ImageButton>
 			<controls:ImageButton x:Name="GlutenButton" 
 									Text="Gluten"
+									BackgroundColor="#00FFFFFF"
+									ImageHeightRequest="150" 
+									ImageWidthRequest="150" 
+									HorizontalOptions="FillAndExpand"
+									Orientation="ImageOnBottom"
+									Source="{Binding WheatImage}"
+									Command="{Binding WheatCommand}"
+									CommandParameter="{x:Static models:EnumProfile.Wheat }">
+			</controls:ImageButton>
+		</StackLayout>
+		<StackLayout Orientation="Horizontal">
+			<controls:ImageButton x:Name="VeganButton" 
+									Text="Vegano"
+									BackgroundColor="#00FFFFFF"
+									ImageHeightRequest="150" 
+									ImageWidthRequest="150" 
+									HorizontalOptions="FillAndExpand"
+									Orientation="ImageOnBottom"
+									Source="{Binding VeganImage}"
+									Command="{Binding VeganCommand}"
+									CommandParameter="{x:Static models:EnumProfile.Vegan }">
+			</controls:ImageButton>
+			<controls:ImageButton x:Name="VeganButton2" 
+									Text="...."
+									BackgroundColor="#00FFFFFF"
 									ImageHeightRequest="150" 
 									ImageWidthRequest="150" 
 									HorizontalOptions="FillAndExpand"
 									Orientation="ImageOnBottom">
-			    <controls:ImageButton.Source>
-                    <OnPlatform x:TypeArguments="ImageSource">
-                        <OnPlatform.iOS>
-                            <FileImageSource File="LactoseGreen.png" />
-                        </OnPlatform.iOS>
-                        <OnPlatform.Android>
-                            <FileImageSource File="LactoseGreen.png" />
-                        </OnPlatform.Android>
-                        <OnPlatform.WinPhone>
-                            <FileImageSource File="Images/LactoseGreen.png" />
-                        </OnPlatform.WinPhone>
-                    </OnPlatform>
-                </controls:ImageButton.Source>
 			</controls:ImageButton>
-		</StackLayout>
-		<StackLayout Orientation="Horizontal">
-			<Image Source="LactoseNeutral.png"></Image>
-			<Image Source="LactoseNeutral.png"></Image>
 		</StackLayout>
 		<Button Text="Continuar"></Button>
 	</StackLayout>

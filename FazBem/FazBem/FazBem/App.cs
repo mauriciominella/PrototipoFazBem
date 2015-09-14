@@ -17,19 +17,19 @@ namespace FazBem
             DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
             DependencyService.Register<IUserRepository, UserRepository>();
 		
-            var user = new User
-            {
-                Name = "Rodrigo Wirth",
-                Profiles = EnumProfile.Gluten | EnumProfile.Lactose
-            };
-		
-            IUserRepository userRepository = DependencyService.Get<IUserRepository>();
-
-            var users = userRepository.List();
-            if (users.Count == 0)
+//            var user = new User
+//            {
+//                Name = "Rodrigo Wirth",
+//                Profiles = EnumProfile.Gluten | EnumProfile.Lactose
+//            };
+//		
+//            IUserRepository userRepository = DependencyService.Get<IUserRepository>();
+//
+//            var users = userRepository.List();
+//            if (users.Count == 0)
                 MainPage = new NavigationPage(new FazBem.Views.FindYourProfile());
-            else
-                MainPage = new NavigationPage(new FazBem.Views.CameraView());
+//            else
+//                MainPage = new NavigationPage(new FazBem.Views.CameraView());
         }
 
         protected override void OnStart()
