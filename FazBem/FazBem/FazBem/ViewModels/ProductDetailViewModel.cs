@@ -33,6 +33,17 @@ namespace FazBem.ViewModels
 				Notify ("ProductDescription");
 			}
 		}
+
+		ProductRating selectedProductRating;
+		public ProductRating SelectedProductRating {
+			get {
+				return selectedProductRating;
+			}
+			set {
+				selectedProductRating = value;
+				Notify ("SelectedProductRating");
+			}
+		}
 			
 		public ProductDetailViewModel()
 		{
@@ -92,10 +103,12 @@ namespace FazBem.ViewModels
 
 		void Like(ProductRating productRating){
 			productRating.LikeCount++;
+			Notify ("ProductRatings");
 		}
 
 		void Unlike(ProductRating productRating){
 			productRating.UnlikeCount++;
+			Notify ("ProductRatings");
 		}
 
 		void ProductComments(){

@@ -12,25 +12,30 @@ namespace FazBem.Views.Converters
 		{
 			string imagePath = "LactoseNeutral.png";
 
-			if (value is UserRating) {
+			string imagePrefix = "";
+			string imageColor = "";
 
-                UserRating userRating = (UserRating)value;
+			if (value is ProductRating) {
 
-                switch (userRating.Profile)
-                {
-                    case EnumProfile.Lactose:
-                        break;
-                    case EnumProfile.Wheat:
-                        break;
-                    case EnumProfile.Vegan:
-                        break;
-                    default:
-                        break;
-                }
+				ProductRating productRating = (ProductRating)value;
+
+				imagePrefix = productRating.Profile.ToString ();
+
+				if (productRating.LikeCount <= 0 || productRating.UnlikeCount <= 0)
+					imageColor = "Neutral";
+
+
+				if (productRating.LikeCount > productRating.UnlikeCount)
+					imageColor = "Green";
+				else if (productRating.LikeCount < productRating.UnlikeCount)
+					imageColor = "Red";
+				else
+					imageColor = "Neutral";
             }
 
-			throw new NotImplementedException ();
+			return imagePrefix + imageColor + ".png";
 		}
+
 		public object ConvertBack (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
 			throw new NotImplementedException ();

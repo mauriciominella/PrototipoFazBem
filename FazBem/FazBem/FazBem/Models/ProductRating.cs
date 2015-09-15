@@ -36,6 +36,7 @@ namespace FazBem.Models
 			set {
 				likeCount = value;
 				Notify ("LikeCount");
+				Notify ("ImagePath");
 			}
 		}
 
@@ -47,9 +48,37 @@ namespace FazBem.Models
 			set {
 				unlikeCount = value;
 				Notify ("UnlikeCount");
+				Notify ("ImagePath");
 			}
 		}
 
+		public string ImagePath {
+			get {
+				return GetImagePath ();
+			}
+		}
+
+		private string GetImagePath(){
+			
+			string imagePath = "LactoseNeutral.png";
+
+			string imagePrefix = "";
+			string imageColor = "";
+
+			imagePrefix = this.Profile.ToString ();
+
+			if (this.LikeCount <= 0 || this.UnlikeCount <= 0)
+				imageColor = "Neutral";
+
+			if (this.LikeCount > this.UnlikeCount)
+				imageColor = "Green";
+			else if (this.LikeCount < this.UnlikeCount)
+				imageColor = "Red";
+			else
+				imageColor = "Neutral";
+
+			return imagePrefix + imageColor + ".png";
+		}
 
 		#region INotifyPropertyChanged implementation
 

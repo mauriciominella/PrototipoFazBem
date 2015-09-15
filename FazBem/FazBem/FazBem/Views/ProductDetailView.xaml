@@ -20,7 +20,7 @@
 									</StackLayout>
 
 									<StackLayout x:Name="StackImg" VerticalOptions="Center">
-										<xlabs:ImageButton BackgroundColor="White" Image="LactoseNeutral.png" />
+										<xlabs:ImageButton BackgroundColor="White" Image="{Binding ImagePath}" />
 									</StackLayout>
 
 									<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
