@@ -67,9 +67,11 @@ namespace FazBem.ViewModels
         {
             get
             {
-                return _takePictureCommand ?? (_takePictureCommand = new Command(
+               /* return _takePictureCommand ?? (_takePictureCommand = new Command(
                                                                        async () => await TakePicture(),
-                                                                       () => true));
+                                                                       () => true));*/
+
+				return _takePictureCommand ?? (_takePictureCommand = new Command (this.TakePicture));
             }
         }
 
@@ -105,9 +107,9 @@ namespace FazBem.ViewModels
         /// Takes the picture.
         /// </summary>
         /// <returns>Take Picture Task.</returns>
-        private async Task<MediaFile> TakePicture()
+        private async void TakePicture()
         {
-            Setup();
+            /*Setup();
 
             ImageSource = null;
 
@@ -133,7 +135,19 @@ namespace FazBem.ViewModels
                 }
 
                 return null;
-            }, _scheduler);
+            }, _scheduler);*/
+
+			var scanner = new ZXing.Mobile.MobileBarcodeScanner ();
+
+			var result = await scanner.Scan();
+
+			if (result != null) {
+				await _messageService.ShowAsync ("Scanned Barcode: " + result.Text);
+				await _navigationService.NavigateToProductDetail ();
+			}
+			else
+				await _messageService.ShowAsync ("Failed trying to scan the product");
+
         }        
 
         private static double ConvertBytesToMegabytes(long bytes)

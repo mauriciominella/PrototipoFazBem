@@ -72,6 +72,9 @@ namespace FazBem.Droid
 			global::XLabs.Forms.Resource.Style.CalendarTitle = global::FazBem.Droid.Resource.Style.CalendarTitle;
 			global::XLabs.Platform.Resource.String.ApplicationName = global::FazBem.Droid.Resource.String.ApplicationName;
 			global::XLabs.Platform.Resource.String.Hello = global::FazBem.Droid.Resource.String.Hello;
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::FazBem.Droid.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::FazBem.Droid.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::FazBem.Droid.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -222,25 +225,31 @@ namespace FazBem.Droid
 			public const int thumbs_down = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int thumbs_up = 2130837514;
+			public const int thumbs_down_gray = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int VeganGreen = 2130837515;
+			public const int thumbs_up = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int VeganNeutral = 2130837516;
+			public const int thumbs_up_gray = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int VeganRed = 2130837517;
+			public const int VeganGreen = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int WheatGreen = 2130837518;
+			public const int VeganNeutral = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int WheatNeutral = 2130837519;
+			public const int VeganRed = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int WheatRed = 2130837520;
+			public const int WheatGreen = 2130837520;
+			
+			// aapt resource value: 0x7f020011
+			public const int WheatNeutral = 2130837521;
+			
+			// aapt resource value: 0x7f020012
+			public const int WheatRed = 2130837522;
 			
 			static Drawable()
 			{
@@ -260,6 +269,9 @@ namespace FazBem.Droid
 			
 			// aapt resource value: 0x7f080001
 			public const int calendar_view = 2131230721;
+			
+			// aapt resource value: 0x7f080005
+			public const int contentFrame = 2131230725;
 			
 			// aapt resource value: 0x7f080003
 			public const int left_arrow = 2131230723;
@@ -297,6 +309,12 @@ namespace FazBem.Droid
 			
 			// aapt resource value: 0x7f030004
 			public const int week = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int zxingscanneractivitylayout = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int zxingscannerfragmentlayout = 2130903046;
 			
 			static Layout()
 			{

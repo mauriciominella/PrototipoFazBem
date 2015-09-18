@@ -3,6 +3,13 @@
 	<AbsoluteLayout>
 		<RelativeLayout x:Name="RootLayout" BackgroundColor="White">
 			<StackLayout Orientation="Vertical" HorizontalOptions="Center" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RootLayout, Property=Height, Factor=1}">
+
+				<StackLayout HorizontalOptions="Fill" Orientation="Horizontal" BackgroundColor="#7FBDF0" Spacing="10" Padding="10"> 
+
+					<BoxView HeightRequest="80" WidthRequest="80" BackgroundColor="White" />
+					
+				</StackLayout>
+
 				<ListView ItemsSource="{Binding ProductRatings}" RowHeight="190">
 					<ListView.ItemTemplate>
 						<DataTemplate>
@@ -13,7 +20,7 @@
 									<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
 									<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Spacing="0">
-										<xlabs:ImageButton x:Name="UnlikeButton" Orientation="ImageOnBottom" Command="{Binding BindingContext.UnlikeCommand, Source={x:Reference RootLayout}}" CommandParameter="{Binding .}" BackgroundColor="White" Image="thumbs_down.png" />
+										<xlabs:ImageButton x:Name="UnlikeButton" Orientation="ImageOnBottom" Command="{Binding BindingContext.UnlikeCommand, Source={x:Reference RootLayout}}" CommandParameter="{Binding .}" BackgroundColor="White" Image="thumbs_down_gray.png" />
 										<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 											<Label Text="{Binding UnlikeCount}" FontSize="18" TextColor="#D1391C" FontAttributes="Bold" />
 										</StackLayout>
@@ -24,7 +31,7 @@
 									</StackLayout>
 
 									<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-										<xlabs:ImageButton Orientation="ImageOnBottom" x:Name="LikeButton" TextColor="#88BE49" Command="{Binding BindingContext.LikeCommand, Source={x:Reference RootLayout}}" CommandParameter="{Binding .}" BackgroundColor="White" Image="thumbs_up.png" />
+										<xlabs:ImageButton Orientation="ImageOnBottom" x:Name="LikeButton" TextColor="#88BE49" Command="{Binding BindingContext.LikeCommand, Source={x:Reference RootLayout}}" CommandParameter="{Binding .}" BackgroundColor="White" Image="thumbs_up_gray.png" />
 										<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 											<Label Text="{Binding LikeCount}" FontSize="18" TextColor="#88BE49" FontAttributes="Bold"  />
 										</StackLayout>
