@@ -14,6 +14,7 @@ namespace FazBem
         {
             DependencyService.Register<ViewModels.Services.IMessageService, Views.Services.MessageService>();
             DependencyService.Register<ViewModels.Services.INavigationService, Views.Services.NavigationService>();
+			DependencyService.Register<Services.IProductService, Services.ProductService>();
 		
             // The root page of your application
            MainPage = new NavigationPage(new FazBem.Views.FindYourProfile());

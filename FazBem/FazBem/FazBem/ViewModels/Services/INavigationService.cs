@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FazBem.Models;
 
 namespace FazBem.ViewModels.Services
 {
@@ -10,7 +11,7 @@ namespace FazBem.ViewModels.Services
     {
         Task NavigateToLogin();
 
-        Task NavigateToProductDetail();
+		Task NavigateToProductDetail(Product product);
 
 		Task NavigateToCamera();
 

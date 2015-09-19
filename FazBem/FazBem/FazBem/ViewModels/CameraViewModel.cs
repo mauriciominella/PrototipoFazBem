@@ -8,6 +8,7 @@ using XLabs.Forms.Mvvm;
 using XLabs.Ioc;
 using XLabs.Platform.Device;
 using XLabs.Platform.Services.Media;
+using FazBem.Models;
 
 namespace FazBem.ViewModels
 {
@@ -143,7 +144,10 @@ namespace FazBem.ViewModels
 
 			if (result != null) {
 				await _messageService.ShowAsync ("Scanned Barcode: " + result.Text);
-				await _navigationService.NavigateToProductDetail ();
+
+				Product product = new Product () { BarCode = result.Text };
+
+				await _navigationService.NavigateToProductDetail (product);
 			}
 			else
 				await _messageService.ShowAsync ("Failed trying to scan the product");

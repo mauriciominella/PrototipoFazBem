@@ -7,11 +7,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using FazBem.Interfaces;
+using FazBem.Services;
 
 namespace FazBem.ViewModels
 {
-    public class ProductDetailViewModel : ViewModelBase
+	public class ProductDetailViewModel : ViewModelBase, IInitializableViewModel
     {
+		#region IParametrizedViewModel implementation
+
+		public void Init (object data)
+		{
+			if (data != null && data is Product) {
+				this.ProductToBeRated = (Product)data;
+
+				this.ProductToBeRated = _productService.GetByBardCode (this.ProductToBeRated.BarCode);
+
+				FetchData ();
+			}
+		}
+
+		#endregion
+
 		bool isLoading;
 		public bool IsLoading {
 			get {
@@ -44,16 +61,18 @@ namespace FazBem.ViewModels
 				Notify ("SelectedProductRating");
 			}
 		}
-			
+
+		private IProductService _productService = null;
+
 		public ProductDetailViewModel()
 		{
+			_productService = DependencyService.Get<IProductService> ();
+
 			this.ProductRatings = new ObservableCollection<ProductRating> ();
 
 			this.LikeCommand = new Command<ProductRating> (p => Like(p));
 			this.UnlikeCommand = new Command<ProductRating> (p => Unlike(p));
 			this.ProductCommentsCommand = new Command (ProductComments);
-
-			FetchData ();
 		}
 
         public ObservableCollection<ProductRating> ProductRatings { get; set; }
@@ -117,9 +136,6 @@ namespace FazBem.ViewModels
 
 		void FetchData ()
 		{
-			ProductToBeRated = new Product () {
-				Name = "Bolacha Maria"
-			};
 			User user = new User () {
 				Name = "Mauricio Minella"
 			};

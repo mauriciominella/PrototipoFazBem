@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using XLabs.Forms.Mvvm;
 using System.Runtime.CompilerServices;
+using FazBem.Interfaces;
 
 namespace FazBem.ViewModels
 {
-    public abstract class ViewModelBase: ViewModel
+	public abstract class ViewModelBase: ViewModel
     {
+
         protected readonly Services.INavigationService _navigationService;
         protected readonly Services.IMessageService _messageService;
 

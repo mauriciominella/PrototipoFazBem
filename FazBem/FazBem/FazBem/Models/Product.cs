@@ -11,7 +11,17 @@ namespace FazBem.Models
         public string Id { get; set; }
         public string Name { get; set; }
         public string BarCode { get; set; }
-        public IList<ProductComment> Comments { get; set; }
+
+		IList<ProductComment> comments = new List<ProductComment>();
+        public IList<ProductComment> Comments {
+			get {
+				return comments;
+			}
+			set {
+				comments = value;
+			}
+		}
+
     }
 
     public class ProductComment

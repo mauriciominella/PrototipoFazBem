@@ -10,6 +10,8 @@ namespace FazBem.Services
     public interface IProductService
     {
         Product Get(long id);
+		Product GetByBardCode (string barCode);
+
     }
 
     public class ProductService : IProductService
@@ -27,7 +29,11 @@ namespace FazBem.Services
 
             throw new Exception("Product not found");
 
-        }        
+        } 
+
+		public Product GetByBardCode(string barCode){
+			return CreateProduct1 ();
+		}
 
         private Product CreateProduct1()
         {
