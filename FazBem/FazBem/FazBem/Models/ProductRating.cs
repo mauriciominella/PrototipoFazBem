@@ -59,8 +59,6 @@ namespace FazBem.Models
 		}
 
 		private string GetImagePath(){
-			
-			string imagePath = "LactoseNeutral.png";
 
 			string imagePrefix = "";
 			string imageColor = "";

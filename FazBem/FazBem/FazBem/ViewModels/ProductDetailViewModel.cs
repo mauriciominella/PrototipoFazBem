@@ -73,6 +73,11 @@ namespace FazBem.ViewModels
 			this.LikeCommand = new Command<ProductRating> (p => Like(p));
 			this.UnlikeCommand = new Command<ProductRating> (p => Unlike(p));
 			this.ProductCommentsCommand = new Command (ProductComments);
+			this.ScanProductCommand = new Command (ScanProduct);
+		}
+
+		private void ScanProduct(){
+			_navigationService.NavigateToCamera ();
 		}
 
         public ObservableCollection<ProductRating> ProductRatings { get; set; }
@@ -99,13 +104,13 @@ namespace FazBem.ViewModels
 			}
 		}
 
-		ICommand openCameraCommand;
-        public ICommand OpenCameraCommand {
+		ICommand scanProductCommand;
+        public ICommand ScanProductCommand {
 			get {
-				return openCameraCommand;
+				return scanProductCommand;
 			}
 			set {
-				openCameraCommand = value;
+				scanProductCommand = value;
 			}
 		}
 

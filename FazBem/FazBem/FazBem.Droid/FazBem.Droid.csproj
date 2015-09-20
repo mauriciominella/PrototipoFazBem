@@ -140,6 +140,8 @@
     <AndroidResource Include="Resources\drawable\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable\thumbs_down_gray.png" />
     <AndroidResource Include="Resources\drawable\thumbs_up_gray.png" />
+    <AndroidResource Include="Resources\drawable\barcode_white_48.png" />
+    <AndroidResource Include="Resources\drawable\magnifierGlass_48.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
